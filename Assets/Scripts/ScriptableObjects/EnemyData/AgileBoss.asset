@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5422751523f5dc4d975c214d47d9a3b, type: 3}
-  m_Name: RunStats
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerData
-  maxHealth: 10
+  m_Script: {fileID: 11500000, guid: de001c042287f2144ad26b437f925d11, type: 3}
+  m_Name: AgileBoss
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyData
+  health: 15
   speed: 5
-  damage: 1
-  fireRate: 0.5
+  damage: 5
+  contactDamage: 2
+  fireRate: 2
   bulletSpeed: 10
-  range: 5
+  range: 1

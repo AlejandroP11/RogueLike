@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -25,6 +26,12 @@ public class GameManager : MonoBehaviour
     {
         // Reset runStats to baseStats at the start of a new run
         runStats.ResetStats(baseStats); 
+    }
+
+    public void GameOver()
+    {
+        Debug.Log("Game Over!");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reload the current scene to restart the game
     }
 }
 

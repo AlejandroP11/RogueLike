@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +16,15 @@ public class PlayerActions : MonoBehaviour
     public Transform firePoint;
 
     private float lastFireTime;
+
+    private bool isInvincible = false;
+    private bool isDead = false;
+
+    // Method to get the current health of the player, used by the UI to update the health bar.
+    public float GetCurrentHealth()
+    {
+        return currentHealth;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -70,5 +80,32 @@ public class PlayerActions : MonoBehaviour
         {
             bulletScript.Launch(direction, playerStats.bulletSpeed, playerStats.range, playerStats.damage);
         }
+    }
+    public void TakeDamage(float damage)
+    {
+        if (isDead) return;
+        if (isInvincible) return;
+
+        currentHealth -= damage;
+        Debug.Log("Player took " + damage + " damage. Current health: " + currentHealth);
+        StartCoroutine(InvincibilityFrames(1.5f));
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        isDead = true;
+        GameManager.Instance.GameOver();
+    }
+
+    IEnumerator InvincibilityFrames(float duration)
+    {
+        isInvincible = true;
+        Debug.Log("Player is invincible for " + duration + " seconds.");
+        yield return new WaitForSeconds(duration);
+        isInvincible = false;
     }
 }

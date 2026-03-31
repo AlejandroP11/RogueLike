@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|c:\\users\\alejandro\\desktop\\unity junior pathway\\roguelike\\assets\\scripts\\bossagile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bossagile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|c:\\users\\alejandro\\desktop\\unity junior pathway\\roguelike\\assets\\scripts\\playeractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playeractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,19 +15,23 @@
       "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\enemydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\ui\\healthui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\healthui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|c:\\users\\alejandro\\desktop\\unity junior pathway\\roguelike\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -34,33 +42,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BossAgile.cs",
+              "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\BossAgile.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BossAgile.cs",
+              "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\BossAgile.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BossAgile.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAiwEkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T13:32:43.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "HealthUI.cs",
+              "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\UI\\HealthUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\HealthUI.cs",
+              "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\UI\\HealthUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\HealthUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T13:25:49.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T18:42:48.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T18:42:48.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Bullet.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\Bullet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
               "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\Bullet.cs",
               "RelativeToolTip": "Assets\\Scripts\\Bullet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBoAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T15:57:19.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T15:57:19.217Z"
             },
             {
               "$type": "Document",
@@ -70,14 +102,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
               "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\Enemy.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemy.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAwwBUAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCwAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-17T14:25:17.487Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "EnemyData.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\EnemyData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyData.cs",
@@ -90,26 +122,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PlayerData.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\PlayerData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerData.cs",
               "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\PlayerData.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-17T11:31:00.614Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PlayerActions.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\PlayerActions.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerActions.cs",
               "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\PlayerActions.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerActions.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAA9wBUAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowDcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-16T13:56:31.056Z",
               "EditorCaption": ""

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de001c042287f2144ad26b437f925d11, type: 3}
   m_Name: EnemyData
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  health: 10
-  speed: 5
+  health: 3
+  speed: 2.5
   damage: 1
   contactDamage: 1
   fireRate: 0.5
   bulletSpeed: 10
-  range: 1
+  range: 15

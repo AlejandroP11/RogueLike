@@ -4,11 +4,14 @@ public class Enemy : MonoBehaviour
 {
     public EnemyData enemyStats;
     private Rigidbody enemyRb;
-    private GameObject player;
+    protected GameObject player;
     private bool isDead = false;
     private float currentHealth;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+    private float lastFireTime;
 
-    void Start()
+    protected virtual void Start()
     {
         player = GameObject.FindWithTag("Player");
         enemyRb = GetComponent<Rigidbody>();
@@ -20,6 +23,29 @@ public class Enemy : MonoBehaviour
         if (!isDead)
         {
             MoveEnemy();
+        }
+    }
+
+    private void Update()
+    {
+        if (!isDead && player != null)
+        {
+            if (Time.time >= lastFireTime + (1f / enemyStats.fireRate))
+            {
+                Shoot();
+                lastFireTime = Time.time;
+            }
+        }
+    }
+
+    protected virtual void OnCollisionStay(Collision other)
+    {
+        if (!isDead && player != null)
+        {
+            if (other.gameObject.TryGetComponent<PlayerActions>(out PlayerActions player))
+            {
+                player.TakeDamage(enemyStats.contactDamage);
+            }
         }
     }
 
@@ -62,6 +88,26 @@ public class Enemy : MonoBehaviour
         else
         {
             enemyRb.linearVelocity = Vector3.zero;
+        }
+    }
+
+    protected virtual void Shoot()
+    {
+        // Calculate the direction from the enemy to the player
+        Vector3 direction = (player.transform.position - transform.position).normalized;
+
+        // Position the fire point slightly in front of the enemy to prevent immediate collision with the bullet
+        firePoint.localPosition = Vector3.forward * 1.2f;
+
+        // Instantiate the bullet at the fire point's position and rotation
+        GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+
+        // Ignore collision between the bullet and the player
+        Physics.IgnoreCollision(newBullet.GetComponent<Collider>(), GetComponent<Collider>());
+
+        if (newBullet.TryGetComponent<Bullet>(out Bullet bulletScript))
+        {
+            bulletScript.Launch(direction, enemyStats.bulletSpeed, enemyStats.range, enemyStats.damage);
         }
     }
 }
