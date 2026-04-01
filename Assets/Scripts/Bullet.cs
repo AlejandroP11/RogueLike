@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger detectado con: " + other.gameObject.name);
+        Debug.Log("Trigger detected: " + other.gameObject.name);
         if (other.TryGetComponent <Enemy>(out Enemy enemy))
         { 
             enemy.TakeDamage(bulletDamage); // Call the TakeDamage method on the enemy

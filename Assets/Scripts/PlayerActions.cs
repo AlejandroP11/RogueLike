@@ -15,7 +15,7 @@ public class PlayerActions : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
 
-    private float lastFireTime;
+    private float lastFireTime = -Mathf.Infinity;
 
     private bool isInvincible = false;
     private bool isDead = false;

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.WSA;
 
 public class BossAgile : Enemy
 {
@@ -83,19 +84,21 @@ public class BossAgile : Enemy
         {
             // Calculate the distance to the player.
             float distance = Vector3.Distance(transform.position, player.transform.position);
+            // Make the boss face the player while idle.
+            transform.LookAt(player.transform);
 
             // If the player is outside the charge range, move towards them at a normal speed.
             if (distance > chargeRange)
             {
                 // Move towards the player at a normal speed.
                 Vector3 direction = (player.transform.position - transform.position).normalized;
-                GetComponent<Rigidbody>().linearVelocity = direction * enemyStats.speed;
+                enemyRb.linearVelocity = direction * enemyStats.speed;
             }
             // If the player is within the charge range, prepare to charge.
             else
             {
                 // If the player is within the charge range, prepare to charge.
-                GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+                enemyRb.linearVelocity = Vector3.zero;
                 ChangeState(BossState.Telegraphing);
                 Debug.Log("Boss State: " + currentState);
             }
@@ -134,10 +137,10 @@ public class BossAgile : Enemy
 
     void HandleCharging()
     {
-        GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + chargeDirection * chargeSpeed * Time.fixedDeltaTime);
+        enemyRb.linearVelocity = chargeDirection * chargeSpeed;
         if(stateTimer >= chargeDuration)
         {
-            GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+            enemyRb.linearVelocity = Vector3.zero;
             if (!hitPlayerDuringCharge)
             {
                 failCharges++;
@@ -155,15 +158,44 @@ public class BossAgile : Enemy
 
     void HandleRecovering()
     {
-        //TODO
+        enemyRb.linearVelocity = Vector3.zero;
+        if (stateTimer >= recoverDuration)
+        {
+            if (failCharges == 3)
+            {
+                // If the boss has failed to hit the player 3 times, switch to the shooting state.
+                Debug.Log("Boss has failed to hit the player 3 times, switching to shooting state.");
+                ChangeState(BossState.Shooting);
+            }
+            else
+            {
+                // After the recovery duration, switch back to the idle state to start the cycle again.
+                Debug.Log("Boss finished recovering, switching back to idle state.");
+                ChangeState(BossState.Idle);
+            }
+        }
     }
 
     void HandleShooting()
     {
-        //TODO 
+        // During the shooting state, the boss will shoot towards the player for a short duration before switching back to the idle state.
+        if (stateTimer <= Time.fixedDeltaTime)
+        {
+            transform.LookAt(player.transform);
+            Shoot();
+        }
+
+        // After shooting, the boss will switch back to the idle state to start the cycle again.
+        if (stateTimer >= 1f)
+        {
+            // Reset the fail charge counter after shooting to give the boss a fresh start for the next cycle.
+            failCharges = 0;
+            Debug.Log("Boss finished shooting, switching back to idle state.");
+            ChangeState(BossState.Idle);
+        }
     }
 
-    protected override void OnCollisionStay(Collision other)
+    protected override void OnCollisionEnter(Collision other)
     {
         // Check if the boss collided with the player during the charge.
         if (other.gameObject.TryGetComponent<PlayerActions>(out PlayerActions player))
@@ -173,9 +205,78 @@ public class BossAgile : Enemy
             {
                 // If the boss is currently charging and hits the player, set the flag to indicate a successful hit and switch to the recovering state.
                 hitPlayerDuringCharge = true;
-                GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
-                ChangeState(BossState.Recovering);
+                enemyRb.linearVelocity = Vector3.zero;
                 Debug.Log("Boss hit the player during charge, switching to recovering state.");
+                ChangeState(BossState.Recovering);
+            }
+        }
+
+        // Check if the boss collided with a wall during the charge.
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            if (currentState == BossState.Charging)
+            {
+                // If the boss is currently charging and hits a wall, reset the flag for hitting the player, stop the boss's movement, increment the fail charge counter, and switch to the recovering state.
+                hitPlayerDuringCharge = false;
+                enemyRb.linearVelocity = Vector3.zero;
+                failCharges++;
+                Debug.Log("Boss hit a wall during charge, switching to recovering state.");
+                ChangeState(BossState.Recovering);
+            }
+        }
+    }
+
+    protected override void Shoot()
+    {
+        // Calculate the direction from the boss to the player, ignoring the y-axis to keep the bullets on the same plane.
+        Vector3 direction = player.transform.position - transform.position;
+        Vector3 shootDirection = new Vector3(direction.x, 0, direction.z).normalized;
+
+        // Create an array to hold the different directions for the bullets, with some variation to create a wider attack pattern.
+        Vector3[] directions = new Vector3[5];
+        for(int i = 0; i < directions.Length; i++)
+        {
+            // Create a spread of directions for the bullets, with some variation to create a wider attack pattern.
+            directions[i] = Quaternion.AngleAxis(10f * (i - 2), Vector3.up) * shootDirection;
+        }
+
+        // Position the fire point slightly in front of the enemy to prevent immediate collision with the bullet
+        firePoint.localPosition = Vector3.forward * 1.2f;
+
+        // Instantiate the bullets and set their properties based on the enemy's stats.
+        GameObject[] bullets = new GameObject[5];
+        for (int i = 0; i < 5; i++)
+        {
+            // Instantiate the bullet at the fire point's position and rotation, and store it in the bullets array.
+            GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+            bullets[i] = newBullet;
+        }
+
+        // Ignore collisions between the bullets and the boss to prevent the bullets from hitting the boss immediately after being fired.
+        for (int i = 0; i < bullets.Length; i++)
+        {
+            Physics.IgnoreCollision(bullets[i].GetComponent<Collider>(), GetComponent<Collider>());
+        }
+
+        // Ignore collisions between the bullets themselves to prevent them from colliding with each other and creating unintended behavior.
+        for (int i = 0; i < bullets.Length; i++)
+        {
+            for (int j = i + 1; j < bullets.Length; j++)
+            {
+                Physics.IgnoreCollision(
+                    bullets[i].GetComponent<Collider>(),
+                    bullets[j].GetComponent<Collider>()
+                );
+            }
+        }
+
+        // Launch each bullet in the corresponding direction with the enemy's stats.
+        for (int i = 0; i < bullets.Length; i++)
+        {
+            // Check if the bullet has a Bullet script component, and if so, call the Launch method to set its properties and behavior.
+            if (bullets[i].TryGetComponent<Bullet>(out Bullet bulletScript))
+            {
+                bulletScript.Launch(directions[i], enemyStats.bulletSpeed, enemyStats.range, enemyStats.damage);
             }
         }
     }

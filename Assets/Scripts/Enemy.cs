@@ -3,7 +3,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public EnemyData enemyStats;
-    private Rigidbody enemyRb;
+    protected Rigidbody enemyRb;
     protected GameObject player;
     private bool isDead = false;
     private float currentHealth;
@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    protected virtual void OnCollisionStay(Collision other)
+    protected virtual void OnCollisionEnter(Collision other)
     {
         if (!isDead && player != null)
         {
