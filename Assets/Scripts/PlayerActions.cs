@@ -20,6 +20,8 @@ public class PlayerActions : MonoBehaviour
     private bool isInvincible = false;
     private bool isDead = false;
 
+    private bool playerBullet = true; // Flag to indicate that bullets fired by the player should damage enemies and not the player.
+
     // Method to get the current health of the player, used by the UI to update the health bar.
     public float GetCurrentHealth()
     {
@@ -74,11 +76,12 @@ public class PlayerActions : MonoBehaviour
         firePoint.localPosition = direction * 1.2f;
 
         GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+
         // Ignore collision between the bullet and the player
         Physics.IgnoreCollision(newBullet.GetComponent<Collider>(), GetComponent<Collider>());
         if (newBullet.TryGetComponent<Bullet>(out Bullet bulletScript))
         {
-            bulletScript.Launch(direction, playerStats.bulletSpeed, playerStats.range, playerStats.damage);
+            bulletScript.Launch(direction, playerStats.bulletSpeed, playerStats.range, playerStats.damage, playerBullet);
         }
     }
     public void TakeDamage(float damage)

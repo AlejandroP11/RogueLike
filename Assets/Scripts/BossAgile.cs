@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.WSA;
 
 public class BossAgile : Enemy
 {
@@ -30,7 +29,7 @@ public class BossAgile : Enemy
 
     private float stateTimer = 0f; // Timer to track the duration of the current state.
     private Vector3 chargeDirection; // Direction in which the boss will charge towards the player.
-    private float failCharges = 0; // Counter for failed charge attempts.
+    private int failCharges = 0; // Counter for failed charge attempts.
     private bool hitPlayerDuringCharge = false; // Flag to track if the boss hit the player during the charge.
 
     protected override void Start()
@@ -42,13 +41,17 @@ public class BossAgile : Enemy
             originalColor = meshRenderer.material.color;
         }
     }
-    void Update()
+    protected override void Update()
+    {}
+
+    protected override void FixedUpdate()
     {
         // Update the timer for the current state.
-        stateTimer += Time.deltaTime;
+        stateTimer += Time.fixedDeltaTime;
 
         // Handle state transitions and behavior based on the current state.
-        switch (currentState) {
+        switch (currentState)
+        {
             case BossState.Idle:
                 HandleIdle();
                 break;
@@ -161,7 +164,7 @@ public class BossAgile : Enemy
         enemyRb.linearVelocity = Vector3.zero;
         if (stateTimer >= recoverDuration)
         {
-            if (failCharges == 3)
+            if (failCharges >= 3)
             {
                 // If the boss has failed to hit the player 3 times, switch to the shooting state.
                 Debug.Log("Boss has failed to hit the player 3 times, switching to shooting state.");

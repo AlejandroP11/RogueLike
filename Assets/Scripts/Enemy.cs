@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
         currentHealth = enemyStats.health;
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         if (!isDead)
         {
@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (!isDead && player != null)
         {
@@ -60,10 +60,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void Die()
+    protected virtual void Die()
     {
         GetComponent<Collider>().enabled = false; // Disable collider to prevent further interactions
         isDead = true;
+        if (RoomManager.Instance != null)
+            RoomManager.Instance.EnemyDied();
         Destroy(gameObject, 0.1f);
     }
 
