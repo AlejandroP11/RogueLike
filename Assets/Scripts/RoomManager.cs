@@ -1,8 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RoomManager : MonoBehaviour
 {
     public static RoomManager Instance;
+
+    [SerializeField] private bool isBossRoom;
+    [SerializeField] private string mainMenuSceneName = "Menu";
 
     private Enemy[] enemies;
     private GameObject[] doors;
@@ -27,21 +31,43 @@ public class RoomManager : MonoBehaviour
     {
         // Decrease the enemy count and check if all enemies are defeated
         enemyCount--;
-        if (enemyCount <= 0)
-            OpenDoors();
-    }
 
+        // If all enemies are defeated, open the doors or return to the menu if it's a boss room
+        if (enemyCount <= 0)
+        {
+            if (isBossRoom)
+            {
+                Invoke("ReturnToMenu", 2f); 
+            }
+            else
+            {
+                OpenDoors();
+            }
+        }
+    }
     private void OpenDoors()
     {
         // Activate the door triggers and deactivate the doors
         foreach (GameObject door in doors)
         {
-            // Activate the trigger to allow the player to interact with the door
+            // Activate the door trigger
             Transform trigger = door.transform.Find("DoorTrigger");
             if (trigger != null)
+            {
                 trigger.gameObject.SetActive(true);
+            }
 
-            door.SetActive(false);
+            // Deactivate the door's renderer and collider to make it non-solid and invisible
+            if (door.TryGetComponent<Renderer>(out Renderer rd)) rd.enabled = false;
+            if (door.TryGetComponent<Collider>(out Collider col)) col.enabled = false;
+
+            Debug.Log("All enemies defeated, opening doors.");
         }
+    }
+
+    private void ReturnToMenu()
+    {
+        // Load the main menu scene after a short delay
+        SceneManager.LoadScene(mainMenuSceneName);
     }
 }

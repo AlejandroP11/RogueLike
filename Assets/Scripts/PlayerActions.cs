@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerActions : MonoBehaviour
 {
-
+    public static PlayerActions Instance; 
     public PlayerData playerStats;
     private float currentHealth;
 
@@ -26,6 +26,20 @@ public class PlayerActions : MonoBehaviour
     public float GetCurrentHealth()
     {
         return currentHealth;
+    }
+
+    private void Awake()
+    {
+        // Implementing the Singleton pattern to ensure only one instance of GameManager exists.
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

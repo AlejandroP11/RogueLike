@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Game Over!");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reload the current scene to restart the game
+        SceneManager.LoadScene("Menu"); // Reload the current scene to restart the game
     }
 }
 

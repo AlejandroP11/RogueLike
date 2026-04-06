@@ -3,9 +3,24 @@ using UnityEngine.UI;
 
 public class HealthUI : MonoBehaviour
 {
+    public static HealthUI Instance;
     [Header("Referencias")]
     public Slider healthSlider;      
-    public PlayerActions player;     
+    public PlayerActions player;
+
+    private void Awake()
+    {
+        // Implementing the Singleton pattern to ensure only one instance of GameManager exists.
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Update()
     {

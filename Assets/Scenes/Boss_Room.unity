@@ -1126,6 +1126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21cb725855d97b140be86f0efa1a6c69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
+  isBossRoom: 1
+  mainMenuSceneName: Menu
 --- !u!4 &956857632
 Transform:
   m_ObjectHideFlags: 0
