@@ -4,7 +4,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    public static event EventHandler OnDie;
+    public static event EventHandler OnEnemyDie;
 
     public EnemyData enemyStats;
     protected Rigidbody enemyRb;
@@ -66,7 +66,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Die()
     {
-        OnDie?.Invoke(this, EventArgs.Empty);
+        OnEnemyDie?.Invoke(this, EventArgs.Empty);
         GetComponent<Collider>().enabled = false; // Disable collider to prevent further interactions
         isDead = true;
         Destroy(gameObject, 0.1f);

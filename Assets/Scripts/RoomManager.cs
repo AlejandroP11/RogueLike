@@ -22,7 +22,7 @@ public class RoomManager : MonoBehaviour
 
     private void Start()
     {
-        Enemy.OnDie += Enemy_OnDie;
+        Enemy.OnEnemyDie += Enemy_OnEnemyDie;
 
         // Find all enemies and doors in the room
         enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None); 
@@ -31,10 +31,10 @@ public class RoomManager : MonoBehaviour
     }
 
     private void OnDestroy() {
-        Enemy.OnDie -= Enemy_OnDie;
+        Enemy.OnEnemyDie -= Enemy_OnEnemyDie;
     }
 
-    private void Enemy_OnDie(object sender, EventArgs e) {
+    private void Enemy_OnEnemyDie(object sender, EventArgs e) {
         // Decrease the enemy count and check if all enemies are defeated
         enemyCount--;
 

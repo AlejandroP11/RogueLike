@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerActions : MonoBehaviour
 {
+    public event EventHandler OnPlayerDie;
+
     public static PlayerActions Instance; 
     public PlayerData playerStats;
     private float currentHealth;
@@ -34,12 +37,14 @@ public class PlayerActions : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            OnPlayerDie += GameManager.Instance.On_Player_Die;
         }
         else
         {
             Destroy(gameObject);
         }
+
+
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -69,7 +74,12 @@ public class PlayerActions : MonoBehaviour
 
         Vector3 direction = new Vector3(movementInput.x, 0, movementInput.y).normalized;
         playerRb.MovePosition(playerRb.position + direction * playerStats.speed * Time.fixedDeltaTime);
+    }
 
+    private void OnDestroy() {
+        if (GameManager.Instance != null){
+            OnPlayerDie -= GameManager.Instance.On_Player_Die; 
+        }
     }
 
     public void OnMove(InputValue value)
@@ -115,7 +125,8 @@ public class PlayerActions : MonoBehaviour
     private void Die()
     {
         isDead = true;
-        GameManager.Instance.GameOver();
+        OnPlayerDie?.Invoke(this, EventArgs.Empty);
+        Destroy(gameObject);
     }
 
     IEnumerator InvincibilityFrames(float duration)

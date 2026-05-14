@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,13 +23,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void On_Player_Die(object sender, EventArgs e) {
+        GameOver();
+    }
+
     public void StartNewRun()
     {
         // Reset runStats to baseStats at the start of a new run
         runStats.ResetStats(baseStats); 
     }
 
-    public void GameOver()
+    private void GameOver()
     {
         Debug.Log("Game Over!");
         SceneManager.LoadScene("Menu"); // Reload the current scene to restart the game
