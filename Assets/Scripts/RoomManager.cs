@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,30 +22,32 @@ public class RoomManager : MonoBehaviour
 
     private void Start()
     {
+        Enemy.OnDie += Enemy_OnDie;
+
         // Find all enemies and doors in the room
-        enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
+        enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None); 
         doors = GameObject.FindGameObjectsWithTag("Door");
         enemyCount = enemies.Length;
     }
 
-    public void EnemyDied()
-    {
+    private void OnDestroy() {
+        Enemy.OnDie -= Enemy_OnDie;
+    }
+
+    private void Enemy_OnDie(object sender, EventArgs e) {
         // Decrease the enemy count and check if all enemies are defeated
         enemyCount--;
 
         // If all enemies are defeated, open the doors or return to the menu if it's a boss room
-        if (enemyCount <= 0)
-        {
-            if (isBossRoom)
-            {
-                Invoke("ReturnToMenu", 2f); 
-            }
-            else
-            {
+        if (enemyCount <= 0) {
+            if (isBossRoom) {
+                Invoke("ReturnToMenu", 2f);
+            } else {
                 OpenDoors();
             }
         }
     }
+
     private void OpenDoors()
     {
         // Activate the door triggers and deactivate the doors

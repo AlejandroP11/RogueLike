@@ -1,7 +1,11 @@
+using System;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+
+    public static event EventHandler OnDie;
+
     public EnemyData enemyStats;
     protected Rigidbody enemyRb;
     protected GameObject player;
@@ -62,10 +66,9 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Die()
     {
+        OnDie?.Invoke(this, EventArgs.Empty);
         GetComponent<Collider>().enabled = false; // Disable collider to prevent further interactions
         isDead = true;
-        if (RoomManager.Instance != null)
-            RoomManager.Instance.EnemyDied();
         Destroy(gameObject, 0.1f);
     }
 
