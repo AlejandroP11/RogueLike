@@ -72,6 +72,7 @@
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\EnemyData.cs" />
     <Compile Include="Assets\Scripts\BossAgile.cs" />
+    <Compile Include="Assets\Scripts\UI\CanvasUI.cs" />
     <Compile Include="Assets\Scripts\RoomManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
   </ItemGroup>

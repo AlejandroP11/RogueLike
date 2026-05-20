@@ -6,6 +6,11 @@ using UnityEngine.InputSystem;
 public class PlayerActions : MonoBehaviour
 {
     public event EventHandler OnPlayerDie;
+    public event EventHandler<OnHealthChangedEventArgs> OnHealthChanged;
+    public class OnHealthChangedEventArgs : EventArgs {
+        public float currentHealth;
+        public float maxHealth;
+    }
 
     public static PlayerActions Instance; 
     public PlayerData playerStats;
@@ -25,11 +30,8 @@ public class PlayerActions : MonoBehaviour
 
     private bool playerBullet = true; // Flag to indicate that bullets fired by the player should damage enemies and not the player.
 
-    // Method to get the current health of the player, used by the UI to update the health bar.
-    public float GetCurrentHealth()
-    {
-        return currentHealth;
-    }
+    public enum LastEnteredDirection { None, Up, Down, Left, Right }
+    private LastEnteredDirection lastEnteredDirection = LastEnteredDirection.None;
 
     private void Awake()
     {
@@ -38,13 +40,13 @@ public class PlayerActions : MonoBehaviour
         {
             Instance = this;
             OnPlayerDie += GameManager.Instance.On_Player_Die;
+            OnHealthChanged += HealthUI.Instance.PlayerActions_OnHealthChanged;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
-
-
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -79,6 +81,7 @@ public class PlayerActions : MonoBehaviour
     private void OnDestroy() {
         if (GameManager.Instance != null){
             OnPlayerDie -= GameManager.Instance.On_Player_Die; 
+            OnHealthChanged -= HealthUI.Instance.PlayerActions_OnHealthChanged;
         }
     }
 
@@ -114,6 +117,7 @@ public class PlayerActions : MonoBehaviour
         if (isInvincible) return;
 
         currentHealth -= damage;
+        OnHealthChanged?.Invoke(this, new OnHealthChangedEventArgs { currentHealth = currentHealth, maxHealth = playerStats.maxHealth });
         Debug.Log("Player took " + damage + " damage. Current health: " + currentHealth);
         StartCoroutine(InvincibilityFrames(1.5f));
         if (currentHealth <= 0)
@@ -135,5 +139,10 @@ public class PlayerActions : MonoBehaviour
         Debug.Log("Player is invincible for " + duration + " seconds.");
         yield return new WaitForSeconds(duration);
         isInvincible = false;
+    }
+
+    public void SetLastEnteredDirection(LastEnteredDirection direction)
+    {
+        lastEnteredDirection = direction;
     }
 }

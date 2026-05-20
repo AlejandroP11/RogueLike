@@ -8,7 +8,7 @@ public class DoorTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.TryGetComponent<PlayerActions>(out PlayerActions player))
         {
             Debug.Log("Player entered door trigger, loading scene: " + targetScene);
             SceneManager.LoadScene(targetScene);
