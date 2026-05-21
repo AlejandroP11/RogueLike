@@ -30,8 +30,8 @@ public class PlayerActions : MonoBehaviour
 
     private bool playerBullet = true; // Flag to indicate that bullets fired by the player should damage enemies and not the player.
 
-    public enum LastEnteredDirection { None, Up, Down, Left, Right }
-    private LastEnteredDirection lastEnteredDirection = LastEnteredDirection.None;
+    public enum Direction { None, Up, Down, Left, Right }
+    private Direction lastEnteredDirection = Direction.None;
 
     private void Awake()
     {
@@ -141,8 +141,13 @@ public class PlayerActions : MonoBehaviour
         isInvincible = false;
     }
 
-    public void SetLastEnteredDirection(LastEnteredDirection direction)
+    public void SetLastEnteredDirection(Direction direction)
     {
         lastEnteredDirection = direction;
     }
+
+    public Direction GetLastEnteredDirection() {
+        return lastEnteredDirection;
+    }
+
 }

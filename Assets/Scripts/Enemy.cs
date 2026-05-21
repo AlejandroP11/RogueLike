@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 
     public static event EventHandler OnEnemyDie;
 
-    new public static void ResetStaticData()
+    public static void ResetStaticData()
     {
         OnEnemyDie = null;
     }
