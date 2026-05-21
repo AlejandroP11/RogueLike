@@ -6,14 +6,17 @@ public class Enemy : MonoBehaviour
 
     public static event EventHandler OnEnemyDie;
 
-    public EnemyData enemyStats;
-    protected Rigidbody enemyRb;
-    protected GameObject player;
-    private bool isDead = false;
-    private float currentHealth;
     public GameObject bulletPrefab;
     public Transform firePoint;
+    public EnemyData enemyStats;
+
+    protected Rigidbody enemyRb;
+    protected GameObject player;
+
+    private bool isDead = false;
+    private float currentHealth;
     private float lastFireTime;
+    private bool isPlayerBullet = false;
 
     protected virtual void Start()
     {
@@ -112,7 +115,7 @@ public class Enemy : MonoBehaviour
 
         if (newBullet.TryGetComponent<Bullet>(out Bullet bulletScript))
         {
-            bulletScript.Launch(direction, enemyStats.bulletSpeed, enemyStats.range, enemyStats.damage);
+            bulletScript.Launch(direction, enemyStats.bulletSpeed, enemyStats.range, enemyStats.damage, isPlayerBullet);
         }
     }
 }

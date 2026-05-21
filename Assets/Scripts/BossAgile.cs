@@ -31,6 +31,7 @@ public class BossAgile : Enemy
     private Vector3 chargeDirection; // Direction in which the boss will charge towards the player.
     private int failCharges = 0; // Counter for failed charge attempts.
     private bool hitPlayerDuringCharge = false; // Flag to track if the boss hit the player during the charge.
+    private bool isPlayerBullet = false; // Flag to indicate if the bullet is fired by the player or the boss.
 
     protected override void Start()
     {
@@ -279,7 +280,7 @@ public class BossAgile : Enemy
             // Check if the bullet has a Bullet script component, and if so, call the Launch method to set its properties and behavior.
             if (bullets[i].TryGetComponent<Bullet>(out Bullet bulletScript))
             {
-                bulletScript.Launch(directions[i], enemyStats.bulletSpeed, enemyStats.range, enemyStats.damage);
+                bulletScript.Launch(directions[i], enemyStats.bulletSpeed, enemyStats.range, enemyStats.damage, isPlayerBullet);
             }
         }
     }

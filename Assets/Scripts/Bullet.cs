@@ -20,20 +20,6 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, timeToLive); // Destroy the bullet after it has traveled its range
     }
 
-    // Overloaded method for backward compatibility, defaults to playerBullet = false
-    public void Launch(Vector3 direction, float speed, float range, float damage)
-    {
-        bulletRb = GetComponent<Rigidbody>();
-        bulletDamage = damage;
-        bulletRb.linearVelocity = direction.normalized * speed;
-
-        // Calculate the time to live for the bullet based on its speed and range
-        float timeToLive = range / speed;
-
-        // The range is used as a time to live for the bullet, assuming it travels at a constant speed.
-        Destroy(gameObject, timeToLive); // Destroy the bullet after it has traveled its range
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Trigger detected: " + other.gameObject.name);
