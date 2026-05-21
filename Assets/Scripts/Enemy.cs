@@ -6,6 +6,11 @@ public class Enemy : MonoBehaviour
 
     public static event EventHandler OnEnemyDie;
 
+    new public static void ResetStaticData()
+    {
+        OnEnemyDie = null;
+    }
+
     public GameObject bulletPrefab;
     public Transform firePoint;
     public EnemyData enemyStats;
