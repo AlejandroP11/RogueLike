@@ -16,8 +16,7 @@ public class HealthUI : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
-            
+            PlayerActions.Instance.OnHealthChanged += PlayerActions_OnHealthChanged;
         }
         else
         {

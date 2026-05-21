@@ -40,7 +40,6 @@ public class PlayerActions : MonoBehaviour
         {
             Instance = this;
             OnPlayerDie += GameManager.Instance.On_Player_Die;
-            OnHealthChanged += HealthUI.Instance.PlayerActions_OnHealthChanged;
             DontDestroyOnLoad(gameObject);
         }
         else
