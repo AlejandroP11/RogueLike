@@ -6,31 +6,32 @@ public class RoomSpawner : MonoBehaviour
 
     private void Start()
     {
-        PlayerActions.Direction oppositeDirection = GetOppositeDirection(PlayerActions.Instance.GetLastEnteredDirection());
+        Direction oppositeDirection = GetOppositeDirection(PlayerActions.Instance.GetLastEnteredDirection());
         GetSpawnPointByDirection(oppositeDirection);
     }
 
-    private PlayerActions.Direction GetOppositeDirection(PlayerActions.Direction direction) {
+    private Direction GetOppositeDirection(Direction direction) {
         switch (direction) {
-            case PlayerActions.Direction.Up:
-                return PlayerActions.Direction.Down;
-            case PlayerActions.Direction.Down:
-                return PlayerActions.Direction.Up;
-            case PlayerActions.Direction.Left:
-                return PlayerActions.Direction.Right;
-            case PlayerActions.Direction.Right:
-                return PlayerActions.Direction.Left;
-            case PlayerActions.Direction.None:
-                return PlayerActions.Direction.None;
+            case Direction.Up:
+                return Direction.Down;
+            case Direction.Down:
+                return Direction.Up;
+            case Direction.Left:
+                return Direction.Right;
+            case Direction.Right:
+                return Direction.Left;
+            case Direction.None:
+                return Direction.None;
             default:
-                return PlayerActions.Direction.None;
+                return Direction.None;
         }
     }
 
-    private void GetSpawnPointByDirection(PlayerActions.Direction direction) {
+    private void GetSpawnPointByDirection(Direction direction) {
         foreach (Transform spawnPoint in spawnPoints) {
             if (spawnPoint.GetComponent<SpawnPoint>().GetDirection() == direction) {
                 PlayerActions.Instance.transform.position = spawnPoint.position;
+                Debug.Log($"Player spawned at {spawnPoint.position} from direction {direction}");
                 return;
             }
         }

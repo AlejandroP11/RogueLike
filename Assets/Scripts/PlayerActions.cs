@@ -30,7 +30,6 @@ public class PlayerActions : MonoBehaviour
 
     private bool playerBullet = true; // Flag to indicate that bullets fired by the player should damage enemies and not the player.
 
-    public enum Direction { None, Up, Down, Left, Right }
     private Direction lastEnteredDirection = Direction.None;
 
     private void Awake()

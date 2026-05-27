@@ -3,9 +3,10 @@ using UnityEngine;
 public class SpawnPoint : MonoBehaviour
 {
 
-    [SerializeField] private PlayerActions.Direction spawnDirection;
+    [SerializeField] private Direction spawnDirection;
 
-    public PlayerActions.Direction GetDirection(){
+    public Direction GetDirection(){
+        Debug.Log("SpawnPoint: " + spawnDirection);
         return spawnDirection; 
     }
 }
