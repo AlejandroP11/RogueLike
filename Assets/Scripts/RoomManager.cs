@@ -1,23 +1,21 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RoomManager : MonoBehaviour
 {
-    public static RoomManager Instance;
 
     [SerializeField] private bool isBossRoom;
     [SerializeField] private string mainMenuSceneName = "Menu";
+    [SerializeField] private DoorController[] doors;
 
     private Enemy[] enemies;
-    private GameObject[] doors;
     private int enemyCount;
 
     private void Awake()
     {
-        // Ensure only one instance of RoomManager exists
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+
     }
 
     private void Start()
@@ -25,8 +23,7 @@ public class RoomManager : MonoBehaviour
         Enemy.OnEnemyDie += Enemy_OnEnemyDie;
 
         // Find all enemies and doors in the room
-        enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None); 
-        doors = GameObject.FindGameObjectsWithTag("Door");
+        enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
         enemyCount = enemies.Length;
     }
 
@@ -50,21 +47,8 @@ public class RoomManager : MonoBehaviour
 
     private void OpenDoors()
     {
-        // Activate the door triggers and deactivate the doors
-        foreach (GameObject door in doors)
-        {
-            // Activate the door trigger
-            Transform trigger = door.transform.Find("DoorTrigger");
-            if (trigger != null)
-            {
-                trigger.gameObject.SetActive(true);
-            }
-
-            // Deactivate the door's renderer and collider to make it non-solid and invisible
-            if (door.TryGetComponent<Renderer>(out Renderer rd)) rd.enabled = false;
-            if (door.TryGetComponent<Collider>(out Collider col)) col.enabled = false;
-
-            Debug.Log("All enemies defeated, opening doors.");
+        foreach (var door in doors) {
+            door.UnlockCombat();
         }
     }
 
@@ -72,5 +56,9 @@ public class RoomManager : MonoBehaviour
     {
         // Load the main menu scene after a short delay
         SceneManager.LoadScene(mainMenuSceneName);
+    }
+
+    public void Configure(HashSet<Direction> connectedDirections) {
+
     }
 }

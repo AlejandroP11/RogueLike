@@ -3,15 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class DoorTrigger : MonoBehaviour
 {
-    // When the player enters the trigger, it will load the specified target scene.
-    [SerializeField] private string targetScene;
+    private Direction direction;
+
+    private void Start() {
+        direction = GetComponentInParent<DoorController>().GetDirection();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<PlayerActions>(out PlayerActions player))
         {
-            Debug.Log("Player entered door trigger, loading scene: " + targetScene);
-            SceneManager.LoadScene(targetScene);
+            FloorGenerator.Instance.OnPlayerExitedRoom(direction);
         }
     }
 }

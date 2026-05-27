@@ -3,52 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|c:\\users\\alejandro\\desktop\\unity junior pathway\\roguelike\\assets\\scripts\\doorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\doorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\doorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|c:\\users\\alejandro\\desktop\\unity junior pathway\\roguelike\\assets\\scripts\\playeractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|c:\\users\\alejandro\\desktop\\unity junior pathway\\roguelike\\assets\\scripts\\doortrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\doortrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|c:\\users\\alejandro\\desktop\\unity junior pathway\\roguelike\\assets\\scripts\\floorgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\floorgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\playeractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playeractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\direction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\direction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\ui\\healthui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\healthui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\spawnpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawnpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\roomspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\roomspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\bossagile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bossagile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\roommanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\roommanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\doortrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\doortrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\spawnpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawnpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\direction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\direction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\resetstaticdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\resetstaticdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FB85AE3-D086-CBEB-FEEA-B363B0289BC7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,8 +42,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FloorGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\FloorGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FloorGenerator.cs",
+              "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\FloorGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FloorGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T18:49:25.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DoorTrigger.cs",
+              "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\DoorTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DoorTrigger.cs",
+              "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\DoorTrigger.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DoorTrigger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T18:44:55.941Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -68,122 +78,50 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\DoorController.cs",
               "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\DoorController.cs",
               "RelativeToolTip": "Assets\\Scripts\\DoorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-27T14:25:35.071Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Direction.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\Direction.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Direction.cs",
               "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\Direction.cs",
               "RelativeToolTip": "Assets\\Scripts\\Direction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-27T14:15:31.382Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HealthUI.cs",
-              "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\UI\\HealthUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\HealthUI.cs",
-              "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\UI\\HealthUI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\HealthUI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T13:20:15.463Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "SpawnPoint.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\SpawnPoint.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SpawnPoint.cs",
               "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\SpawnPoint.cs",
               "RelativeToolTip": "Assets\\Scripts\\SpawnPoint.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-21T12:54:38.713Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RoomSpawner.cs",
-              "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\RoomSpawner.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\RoomSpawner.cs",
-              "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\RoomSpawner.cs",
-              "RelativeToolTip": "Assets\\Scripts\\RoomSpawner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T12:43:18.819Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ResetStaticData.cs",
-              "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\ResetStaticData.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ResetStaticData.cs",
-              "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\ResetStaticData.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ResetStaticData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T11:58:59.928Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BossAgile.cs",
-              "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\BossAgile.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\BossAgile.cs",
-              "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\BossAgile.cs",
-              "RelativeToolTip": "Assets\\Scripts\\BossAgile.cs",
-              "ViewState": "AgIAAAABAAAAAAAAAAAwwBoBAAB+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T11:53:57.33Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DoorTrigger.cs",
-              "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\DoorTrigger.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\DoorTrigger.cs",
-              "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\DoorTrigger.cs",
-              "RelativeToolTip": "Assets\\Scripts\\DoorTrigger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T15:38:54.761Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Enemy.cs",
-              "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\Enemy.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
-              "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\Enemy.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T14:25:17.487Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "RoomManager.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\RoomManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RoomManager.cs",
               "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\RoomManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\RoomManager.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACgAAABXAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwD4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-02T20:46:52.938Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
@@ -195,13 +133,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "PlayerActions.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\PlayerActions.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerActions.cs",
               "ToolTip": "C:\\Users\\Alejandro\\Desktop\\Unity Junior Pathway\\RogueLike\\Assets\\Scripts\\PlayerActions.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerActions.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAwwIUAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIUAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-16T13:56:31.056Z",
               "EditorCaption": ""

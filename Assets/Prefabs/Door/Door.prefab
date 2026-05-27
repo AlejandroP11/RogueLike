@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8e5595afd358d46986dbccbacf321b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorTrigger
-  targetScene: 
 --- !u!1 &4112621453268877022
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorController
   doorVisual: {fileID: 6051339499630475681}
   doorOpen: {fileID: 8839767524099668061}
-  dooTrigger: {fileID: 1834420741658598666}
+  doorTrigger: {fileID: 1834420741658598666}
 --- !u!1 &6051339499630475681
 GameObject:
   m_ObjectHideFlags: 0

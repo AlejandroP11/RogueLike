@@ -4,13 +4,15 @@ public class DoorController : MonoBehaviour
 {
     [SerializeField] private GameObject doorVisual;
     [SerializeField] private GameObject doorOpen;
-    [SerializeField] private GameObject dooTrigger;
+    [SerializeField] private GameObject doorTrigger;
 
     private bool isConnected = false;
     private bool isCombatLocked = true;
+    private Direction direction; 
 
     private void Awake() {
         RefreshVisual();
+        direction = GetComponentInChildren<SpawnPoint>().GetDirection();
     }
 
     public void Activate() {
@@ -37,11 +39,15 @@ public class DoorController : MonoBehaviour
         if (isConnected && !isCombatLocked) {
             doorVisual.SetActive(false);
             doorOpen.SetActive(true);
-            dooTrigger.SetActive(true);
+            doorTrigger.SetActive(true);
         } else {
             doorVisual.SetActive(true);
             doorOpen.SetActive(false);
-            dooTrigger.SetActive(false);
+            doorTrigger.SetActive(false);
         }
+    }
+
+    public Direction GetDirection() {
+        return direction;
     }
 }
